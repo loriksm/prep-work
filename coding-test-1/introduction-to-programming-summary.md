@@ -31,10 +31,10 @@ returns the remainder when dividing a number:
 
 ## Variables
 
-Know what a variable is and how to store and recall values.
+Know what a variable is as well as how to store and recall values.
 
 A variable stores a value for later use. Know how to create and
-assign to variables.
+assign variables.
 
 ```ruby
 # create variable, assign it 3
@@ -62,7 +62,7 @@ operation *concatenation*).
 
 ## Methods
 
-Know what a method is, how to define one, how to return a value
+Know what a method is, how to define one, and how to return a value
 from a method. Know how to call a method.
 
 ```ruby
@@ -132,6 +132,7 @@ puts((i > 100) || (i == 25)) # prints true; the second is true
 * Know how to add/remove elements to/from the end of an array.
 * Know how to add/remove elements to/from the front of an array.
 * Know how to find the number of elements in an array.
+* Know how to use the `join` method.
 
 ```ruby
 # Create an empty list
@@ -167,6 +168,10 @@ puts(some_primes == [3, 5, 7]) # prints true; 2 has been removed
 # Know how to add an element to the front of an array
 some_primes.unshift(2)
 puts(some_primes == [2, 3, 5, 7]) # prints true
+
+# Know how to use the `join` method
+["these", "are", "words"].join(" ") == "these are words"
+["lasers", "racecars", "aeroplanes"].join(", ") == "lasers, racecars, aeroplanes"
 ```
 
 ## Strings
@@ -187,6 +192,12 @@ while i < my_string.length
 end
 ```
 
+You should know how to use the `String#split` method:
+
+```ruby
+"I am a sentence!".split == ["I", "am", "a", "sentence!"]
+```
+
 ## Loops
 
 * Know how to use a while loop to perform an action `n` times.
@@ -200,6 +211,7 @@ i = 0
 while i < 5
   # prints 0, 1, 2, 3, 4
   puts("This is iteration #" + i.to_s + "!")
+  i = i + 1
 end
 
 # print the squares of some primes
@@ -207,6 +219,7 @@ some_primes = [2, 3, 5, 7]
 i = 0
 while i < some_primes.length
   puts(some_primes[i] * some_primes[i])
+  i = i + 1
 end
 
 # Keep prompting user for a number until it is > 20

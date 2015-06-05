@@ -1,11 +1,8 @@
 def letter_count(str)
-  counts = {}
+  counts = Hash.new(0)
 
   str.each_char do |char|
-    next if char == " "
-    counts[char] = 0 unless counts.include?(char)
-    counts[char] += 1
+    counts[char] += 1 unless char == " "
   end
-
   counts
 end

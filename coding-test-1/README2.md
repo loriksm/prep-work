@@ -8,14 +8,9 @@ succeed on the challenge.
 
 ## tl;dr
 
-Read all of this document. But here's the executive summary:
-
-0. Read the **[Introduction to Programming][intro-to-programming-1]**.
-0. Do the **[practice problems][practice-problems]**. Review the
-   solutions.
-0. When you're well prepared (and not before), start the challenge! We
-   don't give any preference to applicants based on how soon they
-   start the challenge, so take your time to prepare properly!
+Read all of this document.  When you're well prepared (and not before),
+start the challenge! We don't give any preference to applicants based
+on how soon they start the challenge, so take your time to prepare properly!
 
 ## What is the coding challenge?
 
@@ -32,44 +27,26 @@ these prepwork materials, which are intended to teach you the
 fundamental concepts of programming so that you can succeed on the
 challenge.
 
-## How do I setup Ruby?
-
-Please see the [setup instructions][setup] document.
-
-[setup]: ./setup.md
-
 ## How do I prepare for the challenge?
 
-**You will want to prepare for the coding challenge so that you do
-your best**.
+Go through these codeacademy courses that we've created for you.
 
-**First, you should review our Introduction to Programming**. This
-will cover the fundamental concepts of programming you'll need to
-know. **We recommend that you at least skim them even if you already
-know how to program**:
-
-* **[Introduction To Programming I][intro-to-programming-1]**
-* **[Introduction To Programming II][intro-to-programming-2]**
-* **[Introduction To Programming III][intro-to-programming-3]**
-* **[Introduction To Programming Summary][intro-to-programming-summary]**
-
-[intro-to-programming-1]: ./introduction-to-programming-1.md
-[intro-to-programming-2]: ./introduction-to-programming-2.md
-[intro-to-programming-3]: ./introduction-to-programming-3.md
-[intro-to-programming-summary]: ./introduction-to-programming-summary.md
-
-**Second, we provide practice problems**. Do these after you have read
-the three parts of Introduction to Programming:
-
-* **[Practice Problems][practice-problems]**
-
-[practice-problems]: ./practice-problems
++ [App Academy Prep Work 1][codeacademy-1]
++ [App Academy Prep Work 2][codeacademy-2]
++ [App Academy Prep Work 3][codeacademy-3]
++ [App Academy Prep Work Challenges][codeacademy-challenges]
 
 Doing the practice problems will build your familiarity with Ruby, and
 give you a good idea what the level of difficulty is on the coding
 challenge. It is not required, but **we strongly suggest that you
-complete all the practice problems before taking the coding
+complete all the codeacademy lessons before taking the coding
 challenge**. We want you to be well prepared.
+
+[codeacademy-1]: http://www.codecademy.com/courses/ruby-beginner-en-qgwrx
+[codeacademy-2]: http://www.codecademy.com/courses/ruby-beginner-en-n06ri
+[codeacademy-3]: http://www.codecademy.com/courses/ruby-beginner-en-pjd6e
+[codeacademy-challenges]: http://www.codecademy.com/courses/ruby-beginner-en-1cq0t
+
 
 ## What programming language do I write in?
 

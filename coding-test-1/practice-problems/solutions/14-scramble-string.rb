@@ -9,18 +9,21 @@ def scramble_string(string, positions)
 
   i = 0
   while i < positions.length
-    result.push(string[positions[i]])
+    result = result + string[positions[i]]
     i += 1
   end
 
   return result
 end
 
+# These are tests to check that your code is working. After writing
+# your solution, they should all print true.
+
 puts(
-  "scramble_string(\"abcd\", [3, 1, 2, 0]) == \"dbca\": " +
+  'scramble_string("abcd", [3, 1, 2, 0]) == "dbca": ' +
   (scramble_string("abcd", [3, 1, 2, 0]) == "dbca").to_s
 )
 puts(
-  "scramble_string(\"markov\", [5, 3, 1, 4, 2, 0]) == \"vkaorm\"): " +
+  'scramble_string("markov", [5, 3, 1, 4, 2, 0]) == "vkaorm"): ' +
   (scramble_string("markov", [5, 3, 1, 4, 2, 0]) == "vkaorm").to_s
 )

@@ -6,7 +6,7 @@ require 'rspec'
 # satisfy:
 #
 # (a) `arr[i] < arr[j]`, AND
-# (b) there is no `j2` closer to `i` than `j` where `arr[i] < arr[j]`.
+# (b) there is no `j2` closer to `i` than `j` where `arr[i] < arr[j2]`.
 #
 # In case of ties (see example below), choose the earliest (left-most)
 # of the two indices. If no number in `arr` is larger than `arr[i]`,
@@ -40,6 +40,10 @@ describe "#nearest_larger" do
   end
 
   it "should return nil if no larger number is found" do
-    nearest_larger( [2, 6, 4, 8], 3).should == nil
+    nearest_larger([2, 6, 4, 8], 3).should == nil
+  end
+
+  it "should return the nearer of two greater numbers" do
+    nearest_larger([2, 6, 9, 4, 8], 3).should == 2
   end
 end

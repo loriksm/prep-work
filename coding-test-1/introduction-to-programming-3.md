@@ -48,7 +48,7 @@ cool_things = []
 while cool_things.length < 3
   puts("Tell me a cool thing!")
   one_cool_thing = gets.chomp
-  # This adds one item at the end of the array.
+  # This adds one item at the beginning of the array.
   cool_things.unshift(one_cool_thing)
 end
 
@@ -63,7 +63,7 @@ puts("Here's some cool things in backward order:")
 idx = 0
 while idx < cool_things.length
   puts(cool_things[idx])
-  idx = idx - 1
+  idx = idx + 1
 end
 
 # This prints the array out in order of increasing position, which is
@@ -182,6 +182,27 @@ are not really the same:
 puts("abc" == ["a", "b", "c"])
 ```
 
+## Splitting a String; Joining an Array
+
+Sometimes you would like to split a string into several strings, one
+per word:
+
+```ruby
+"this is a sentence".split == ["this", "is", "a", "sentence"]
+```
+
+Likewise, we can do the reverse, and merge an array of strings into
+one string:
+
+```ruby
+# the argument to join is called a **separator**
+["this", "is", "a", "sentence"].join(" ") == "this is a sentence"
+# this puts a ", " between each of the cool things.
+["racecars", "lasers", "aeroplanes"].join(", ") == "racecars, lasers, aeroplanes"
+```
+
+These methods are very useful when you have to work word-by-word.
+
 ## Writing Your Own Methods
 
 Oftentimes you'll want to repeat some code multiple times:
@@ -250,8 +271,8 @@ Sometimes a method should do some work, and then **return** a value
 back to the caller.
 
 ```ruby
-# The caller will give the input `number_of_squares`; this method will
-# return an array consisting of the first `number_of_squares` squares.
+# The caller will give the input `number_of_squares`; this method will return an array
+# consisting of the squares for numbers from 0 up until the number specified by 'number_of_squares'.
 def first_square_numbers(number_of_squares)
   squares = []
 
@@ -410,6 +431,11 @@ prepare you for the coding challenge.
 before the coding challenge**. You want to practice so that you do
 your best.
 
+If you would like to review the Introduction to Programming Minibook,
+a recap of the various topics are available here: [Introduction To
+Programming Summary][intro-to-programming-summary].
+
 Good luck!
 
+[intro-to-programming-summary]: ./introduction-to-programming-summary.md
 [practice-problems]: ./practice-problems

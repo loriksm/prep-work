@@ -12,7 +12,7 @@ At this point, we've seen a number of **methods**:
 * `gets`
 * `to_i`
 * `to_s`
-* `chomps`
+* `chomp`
 
 Methods are the "verbs" of Ruby. Numbers and strings are the
 "nouns". When you call a method, it does something to one or more
@@ -91,12 +91,12 @@ objects.
 
 Now that we have started talking about comparisons, we should talk
 about code branching. Code branching is what allows your program to do
-different things depending in different conditions:
+different things depending on different conditions:
 
 ```ruby
 puts("Type in a number")
 
-# In one line, we use `gets` to read a string from the user, the
+# In one line, we use `gets` to read a string from the user, then
 # immediately call `to_i` on the string to return an integer.
 num = gets.to_i
 
@@ -110,7 +110,7 @@ puts("Thanks for typing in a number!")
 The `if` has two parts: the **test** (`num < 10`) and the **body**
 (`puts("That's not a big number!")`). The test should be a Ruby
 expression that returns `true` or `false`. The body can be multiple
-lines long. The body is ended by the special keyword `end`.
+lines long. The special keyword `end` indicates the end of the body.
 
 If the test is true, Ruby will run the code in the body. If the test
 is false, Ruby will skip it. In this example, if the user types a
@@ -118,10 +118,10 @@ number less than ten, the program will tell them it is not a big
 number. Regardless whether the number is big or small, the program
 will thank them.
 
-When using `if` always **indent** the body. This makes it easier to
+When using `if`, always **indent** the body. This makes it easier to
 see the start and end of the body. When you start out, indenting might
 seem like a chore, but it really helps with visual organization as you
-write more and more complex programs.
+write increasingly more complex programs.
 
 It is very typical to want to have two branches of code: one if a test
 is true, the other if the test is false. We can do this like so:
@@ -139,7 +139,7 @@ end
 puts("Thanks for typing in a number!")
 ```
 
-By using the `else` keyword, we can give a second body that will be
+By using the `else` keyword, we can create a second body that will be
 run only if the test is false.
 
 Lastly, we can get even more sophisticated and offer more branches:
@@ -177,7 +177,7 @@ puts("Input a number!")
 
 number = gets.to_i
 if (number > 10) && (number < 20)
-  puts("You number was greater than ten AND less than twenty!")
+  puts("Your number was greater than ten AND less than twenty!")
 else
   puts("Your number was either less than ten, OR greater than twenty!")
 end
@@ -197,7 +197,7 @@ else
 end
 ```
 
-A common mistake beginners make is like so:
+The following is a common mistake beginners make:
 
 ```ruby
 # Wrong!
@@ -207,16 +207,24 @@ number = gets.to_i
 if number == (7 || 13)
   puts("You input a magic number!")
 else
-  puts("Your number is no magical")
+  puts("Your number is not magical")
 end
 ```
 
 If you read `number == (7 || 13)` like English, you might think it
 means "Number is equal to 7 or 13". However, Ruby will not interpret
-your program this way. Instead, by writing `7 || 13`, Ruby will ask if
-one of these is `true`. That's not what you want: you want to use `||`
-to connect two logical statements like `(number == 7)` and `(number ==
-13)`.
+your program this way. Instead, Ruby will compare `number` to the
+entire expression inside the parentheses: `(7 || 13)`.
+
+The way the `||` operator works in Ruby is that it returns the left
+**operand** (the 7 in `7 || anything`) if it is "truthy" (anything
+except `nil` or `false`), otherwise it returns the right operand (e.g,
+13 in `false || 13`). Therefore, `(7 || 13) == 7`, since `7` is
+truthy.
+
+Therefore, saying `number == (7 || 13)` is equivalent to saying
+`number == 7`, which is not what you intended. That's why we write
+`(number == 7) || (number == 13)`.
 
 The last important logical connective is **negation**, which we use
 the `!` symbol for:
@@ -260,7 +268,7 @@ greater than (or equal to) 100, the program will jump past the `while`
 loop. If the input number is less than 100, Ruby will execute the body
 of the loop. It will then test again whether `num < 100`. If num is
 still less than 100, it will execute the body again. Ruby will keep
-doing this until the test `num < 100` returns true.
+doing this until the test `num < 100` returns false.
 
 Let's use a loop to write a simple program:
 
@@ -275,8 +283,8 @@ puts("All done!")
 ```
 
 This will print "Hello world!" three times. After setting `i` to zero,
-Ruby will test if `i < 4`. Ruby will print "Hello world!", then set
-`i` to one. Ruby will run the test `i < 4`; this is still true. Ruby
+Ruby will test if `i < 3`. Ruby will print "Hello world!", then set
+`i` to one. Ruby will run the test `i < 3`; this is still true. Ruby
 prints "Hello world!" again and increments `i` once more to two. The
 test still passes and prints "Hello world!" once more. `i` is
 incremented to three; finally the test fails. The body is not executed
@@ -309,7 +317,7 @@ think it has entered an infinite loop.
 ## Arrays
 
 We've talked about integers and strings. We need to talk about one
-last Ruby datastructure: arrays.
+last Ruby data structure: arrays.
 
 Arrays store sequences of objects, separated by commas. For instance:
 

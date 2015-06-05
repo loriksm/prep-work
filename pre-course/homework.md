@@ -1,3 +1,23 @@
+This prepwork constitutes a basic introduction to programming designed to be
+accessible to everyone. It contains some selected readings to bring you up to
+speed on Ruby, plus some exercises for you to complete. All told, we expect the
+prepwork to take about 15hrs.
+
+We believe that the time you invest in learning Ruby will be time well spent:
+the prep work constitutes a self-contained introductory course in programming,
+giving you skills that you will be able to apply to other parts of your life.
+
+
+## Ruby Setup
+
+If you've already setup ruby, you may skip this section. Otherwise,
+please see the [setup instructions][setup] document.
+
+**Note**: The homework problems **will not** be found on Codeacademy - you
+**must** setup the web based ruby development environment.
+
+[setup]: ../coding-test-1/setup.md
+
 # Required homework
 
 First, do the [required readings][readings].
@@ -10,7 +30,8 @@ be ready for class when it starts.
 
 ## Due-date (Only relevant for accepted students)
 
-The prep work is due 3 weeks before your cycle begins.
+Test-First Ruby and Event Manager are due 3 weeks before your cycle
+begins. The Twitter clone is due the Friday before your cycle begins.
 
 ## Test-First Ruby (Alex Chaffee)
 
@@ -25,7 +46,7 @@ you need a refresher on RSpec).
 
 The required exercises are 0-12 and 14. To begin work, go to the
 github page and click to download the ZIP file. Extract the ZIP and
-open the contained index.html. This will contain further instructions
+open the contained README.md. This will contain further instructions
 as to how to proceed.
 
 When you're finished with Test First Ruby, send it to us (instructions
@@ -37,6 +58,22 @@ below).
 that includes a space**. For instance, `/Users/FNAME LNAME/learn_ruby`
 contains a space. If necessary, move the `learn_ruby` to a directory
 path that doesn't contain a space.
+
+## Rails Tutorial
+
+**Not required if you are doing the Post-Acceptance Prepwork as part
+of the application process and have not already enrolled into the
+class.**
+
+We want you to complete and turn in the
+[Rails Tutorial][rails-tutorial] before starting the class. We'll
+start with Ruby before moving into Rails, but we want you to have
+played around with Rails a little. Following along with the tutorial,
+build the Twitter clone that the book has you start in Chapter 3 (read
+and follow along with the earlier chapters, too, of course) and finish
+through the rest of the book.
+
+[rails-tutorial]: http://ruby.railstutorial.org/ruby-on-rails-tutorial-book
 
 ## Event Manager (JumpstartLabs)
 
@@ -56,5 +93,6 @@ When you've finished building the Event Manager, send it to us
 
 When done, please zip your Test First Ruby folder (complete with
 instructions, specs, and your solutions) and mail it to us at
-[admissions@appacademy.io](mailto:admissions@appacademy.io). Please
-also attach your Event Manager work.
+[admissions@appacademy.io](mailto:admissions@appacademy.io). Please also attach
+your Event Manager. If you are completing this after enrolling for the class,
+please send a link to your Twitter clone the Friday before your cohort begins.
